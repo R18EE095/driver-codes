@@ -1,15 +1,12 @@
-# Python Driver Code
-
-def solve(n: int) -> str:
-  # Your code goes here
-  # n is the given input
-  return "Special"
-
-# The following snippet reads the input in the required format. 
-# Just complete the solve function above. 
-
-T = int(input())
-for i in range(T):
-  test_case = input()
-  answer = solve(test_case)
-  print(answer)
+def primeFactors(n):
+  while n%2==0:
+      print 2,
+      n=n/2
+  for i in range(3,int(math.sqrt(n))+1,2):
+     while n%i==0:
+        print i,
+        n=n/i
+   if n>2:
+       print n
+n=315
+primeFactors(n)
